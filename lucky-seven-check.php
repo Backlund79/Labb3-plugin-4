@@ -3,7 +3,9 @@
 /**
 * Plugin Name: Lucky Seven 777 validator
 * Author: Emil
+*
 */
+
 register_activation_hook(__FILE__, 'check_for_lucky_seven');
 function check_for_lucky_seven()
 {
@@ -16,21 +18,19 @@ function deactivate_lucky_seven()
     deactivate_plugins('labb3-plugin-2/777.php');
 }
 
-require 'acf-field-data.php';
-// include ABSPATH . '/wp-content/plugins/labb3-plugin-2/777.php';
+include ABSPATH . '/wp-content/plugins/labb3-plugin-2/777.php';
+
+$test1 = '123456';
+$test2 = '1234567';
 
 
-
-class Validate
+function yes($param1)
 {
-    public $test_string;
+    var_dump($param1);
+}
 
-    public function set_validate_string($test_string)
-    {
-        $this->test_string = $test_string;
-    }
-    public function get_validate_string()
-    {
-        return $this->test_string;
+if (isset($_GET['testrun'])) {
+    if (function_exists($_GET['testrun'])) {
+        $_GET['testrun']($_GET['validate']);
     }
 }
