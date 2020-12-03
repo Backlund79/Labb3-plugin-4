@@ -40,9 +40,9 @@ function assert_if_seven_works()
         $converted_res2 = $calc_value ? 'sant' : 'falskt';
 
         if ($calc_value === $expected_val) {
-            echo '<p style="color: red; padding-left: 1rem" > Skickat värde = ' . $string . '<br> Förväntat värde = ' . $converted_res . '<br> Beräknat värde = ' . $converted_res2 . '<br> Lyckat test </p><br>';
+            echo '<p style="color: green; padding-left: 1rem" > Skickat värde = ' . $string . '<br> Förväntat värde = ' . $converted_res . '<br> Beräknat värde = ' . $converted_res2 . '<br> Lyckat test </p><br>';
         } else {
-            echo '<p style="color: green; padding-left: 1rem" >Skickat värde = ' . $string . '<br> Förväntat värde = ' . $converted_res . '<br> Beräknat värde = ' . $converted_res2 . ' <br> Misslyckat test </p><br>';
+            echo '<p style="color: red; padding-left: 1rem" >Skickat värde = ' . $string . '<br> Förväntat värde = ' . $converted_res . '<br> Beräknat värde = ' . $converted_res2 . ' <br> Misslyckat test </p><br>';
         }
     }
     test_func($six, false);
